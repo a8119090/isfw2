@@ -4,9 +4,14 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>登録情報変更</title>
 
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/osql.js"></script>
+    <link rel="stylesheet" href="register.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>　
 
     <script>
         osql.requireLogin();
@@ -48,15 +53,51 @@
 </head>
 
 <body>
-    <h1>User変更</h1>
-    userid:<input id="tf1" value="" type="textfield" disabled>
-    <br>
-    password:<input id="tf2" value="" type="password">
-    <br>
-    name:<input id="tf3" value="" type="textfield">
-    <button onclick="button2Pressed()">変更</button>
+    <div class="container">
+        <header>
+            <div class = 'row'>
+                <h1>登録情報変更</h1>
+            </div>
+        </header>
+    </div>
 
-    <p id="result"></p>
+    <hr>
+    <div class="container">
+        <form action="＃" method="get" class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group">
+                    <label for="name"> UserID</label>
+                    <input type="textfield" id="tf1" name="id"  class="form-control" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><span class="label label-danger">必須</span> パスワード</label>
+                    <input type="password" id="tf2" name="password" class="form-control" placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel"><span class="label label-danger">必須</span> 名前</label>
+                    <input type="textfield" id="tf3" name="name" class="form-control" placeholder="田中 太郎" required>
+                </div>   
+                <button type="submit" class="btn btn-primary" onclick="button2Pressed()">変更</button>   
+            </div>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="result">
+        <p id="result"></p>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <footer>
+            <p>&copy; Oze.</p>
+        </footer>
+    </div>
+
 </body>
 
 </html>

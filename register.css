@@ -15,10 +15,10 @@ h1{
   text-align: center;
 }
 p{
-    font-size: 12px;
+    font-size: 16px;
       font-weight: bold;
       margin: 0;
-    text-align: right;
+      text-align: center;
   }
 .align-light{
     text-align: right;
