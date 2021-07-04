@@ -5,8 +5,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+    <title>Oze性格診断チャット</title>
+
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/osql.js"></script>
+    <link rel="stylesheet" href="register.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>　
 
     <script>
         osql.requireLogin();
@@ -36,19 +41,48 @@
 </head>
 
 <body>
-    <h1>ユーザ管理　アプリケーション　v3</h1>
-    <div>
-        <h2>ログイン</h2>
-        userid:<input id="tf1" value="" type="textfield">
-        <br>
-        password:<input id="tf2" value="" type="password">
-        <br>
-        <button onclick="buttonPressed()">ログイン</button>
+    <div class="container">
+        <header>
+            <div class = 'row'>
+                <h1>Oze性格診断チャット</h1>
+            </div>
+        </header>
+    </div>
+
+    <hr>
+    <div class="container">
+        <form action="＃" method="get" class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group">
+                    <label for="name"><span class="label label-danger">必須</span> UserID</label>
+                    <input type="textfield" id="tf1" name="id"  class="form-control" placeholder="例：18119000" autofocus required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><span class="label label-danger">必須</span> パスワード</label>
+                    <input type="password" id="tf2" name="password" class="form-control" placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="buttonPressed()">ログイン</button>   
+            </div>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="result">
         <p id="result"></p>
     </div>
+
     <hr>
-    <p><a href="register.html">新規登録</a></p>
+
+    <a href="register.html" class="btn btn--orange btn--radius">新規登録</a>
+
     <hr>
+
+    <div class="container">
+        <footer>
+            <p>&copy; Oze.</p>
+        </footer>
     <p style="text-align: right"><a href="admintop.html">管理者ページ</a></p>
 </body>
 
