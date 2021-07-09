@@ -11,8 +11,30 @@
     <script type="text/javascript" src="lib/osql.js"></script>
 
     <script>
+        var buttonPressed = function(){
+            var ei1 = $('input[name="ei1"]:checked').val();
+            var ei2 = $('input[name="ei2"]:checked').val();
+            var ei3 = $('input[name="ei3"]:checked').val();
 
+            var sn1 = $('input[name="sn1"]:checked').val();
+            var sn2 = $('input[name="sn2"]:checked').val();
+            var sn3 = $('input[name="sn3"]:checked').val();
 
+            var tf1 = $('input[name="tf1"]:checked').val();
+            var tf2 = $('input[name="tf2"]:checked').val();
+            var tf3 = $('input[name="tf3"]:checked').val();
+
+            var jp1 = $('input[name="jp1"]:checked').val();
+            var jp2 = $('input[name="jp2"]:checked').val();
+            var jp3 = $('input[name="jp3"]:checked').val();
+
+            var ei = Number(ei1) + Number(ei2) + Number(ei3);
+            var sn = Number(sn1) + Number(sn2) + Number(sn3)
+            var tf = Number(tf1) + Number(tf2) + Number(tf3)
+            var jp = Number(jp1) + Number(jp2) + Number(jp3)
+
+            document.getElementById('num').innerHTML = ei;
+        }
 
 
     </script>
@@ -24,13 +46,14 @@
 
     <h3>１２問の<span class="foo">全ての質問</span>に対し、どちらが自分によくあっているか選択してください。<br>診断結果により、４つのタイプにわけられ同じタイプ同士でチャットができます。</h3>
 
-
     <div class="back_color01"><strong>【質問01】</strong></div>
+
+    <p id="num"></p>
 
     <p class="test01">
         <input type="radio" id="ei1a" name="ei1" value="1">
         <label for="ei1a" class="back_color8">人と話すことで元気になるタイプだ</label>
-        <input type="radio" id="ei1b" name="ei1" value="-1">
+        <input type="radio" id="ei1b" name="ei" value="-1">
         <label for="ei1b" class="back_color8">1人の時間が好きなタイプだ</label>
     </p>
 
@@ -59,7 +82,7 @@
     <p class="test01">
         <input type="radio" id="ei2a" name="ei2" value="1">
         <label for="ei2a" class="back_color8">せっかち</label>
-        <input type="radio" id="ei2b" name="ei2" value="-1">
+        <input type="radio" id="ei2b" name="ei" value="-1">
         <label for="ei2b" class="back_color8">のんびり</label>
     </p>
 
@@ -69,7 +92,7 @@
     <p class="test01">
         <input type="radio" id="ei3a" name="ei3" value="1">
         <label for="ei3a" class="back_color8">注目を浴びるのが好きだ</label>
-        <input type="radio" id="ei3b" name="ei3" value="-1">
+        <input type="radio" id="ei3b" name="ei" value="-1">
         <label for="ei3b" class="back_color8">できれば注目されるのを避けたい</label>
     </p>
 
@@ -138,7 +161,8 @@
         <label for="jp3b" class="back_color8">プロジェクトを始めるのが喜びだ</label>
     </p>
 
-    <input type="submit" class="button01" value="チャットルームに入る">
+    <br>
+    <button onclick="buttonPressed()">チャットルームに入る</button>
 
 
 </body>
