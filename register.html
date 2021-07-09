@@ -23,14 +23,16 @@
             var password = document.getElementById('tf2').value;
             var username = document.getElementById('tf3').value;
 
-            var sql = `insert into Users (id, password, name) values("${userid}", "${password}", "${username}");`;
-            var objects = await osql.connect(sql);
-            console.log(objects);
+            var sql = `insert into Users (loginid, password, name) values("${userid}", "${password}", "${username}");`;
+            console.log(sql);
+        //     var objects = await osql.connect(sql);
+        //     console.log(objects);
 
-            document.getElementById('result').innerHTML = 'OK';
+        //     document.getElementById('result').innerHTML = 'OK';
 
-            location.href = 'index.html';
-            setTimeout ( TransitionDelay, 5000 );
+        //    // location.href = 'index.html';
+        //     setTimeout ( TransitionDelay, 5000 );
+
         }
     </script>
 
