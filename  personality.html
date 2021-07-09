@@ -6,11 +6,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>性格診断</title>
-    <link rel="stylesheet" href="personality.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/osql.js"></script>
 
     <script>
+
+        async function buttonPressed() {
+            //質問１
+            var input = document.getElementById('ei1a');
+            var value = input.getAttribute('value');
+            document.getElementById('a').innerHTML = input;
+            console.log(value);
+        }
 
 
 
@@ -24,8 +32,9 @@
 
     <h3>１２問の<span class="foo">全ての質問</span>に対し、どちらが自分によくあっているか選択してください。<br>診断結果により、４つのタイプにわけられ同じタイプ同士でチャットができます。</h3>
 
-
     <div class="back_color01"><strong>【質問01】</strong></div>
+
+    <p id="a"></p>
 
     <p class="test01">
         <input type="radio" id="ei1a" name="ei1" value="1">
@@ -139,6 +148,8 @@
     </p>
 
     <input type="submit" class="button01" value="チャットルームに入る">
+    <br>
+    <button onclick="buttonPressed()">チャットルームに入る</button>
 
 
 </body>
