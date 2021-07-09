@@ -12,6 +12,7 @@
 
     <script>
         var buttonPressed = function(){
+            // ラジオボタンを数値に変換 //
             var ei1 = $('input[name="ei1"]:checked').val();
             var ei2 = $('input[name="ei2"]:checked').val();
             var ei3 = $('input[name="ei3"]:checked').val();
@@ -34,8 +35,55 @@
             var jp = Number(jp1) + Number(jp2) + Number(jp3)
 
             document.getElementById('num').innerHTML = ei;
-        }
 
+            // 数値から診断結果を分岐//
+            var personal = ''
+            if (0 < ei){
+                personal += "e"
+            }else{
+                personal += "i"
+            }
+            if (0 < sn){
+                personal += "s"
+            }else{
+                personal += "n"
+            }
+            if (0 < tf){
+                personal += "t"
+            }else{
+                personal += "f"
+            }
+            if (0 < jp){
+                personal += "j"
+            }else{
+                personal += "p"
+            }
+
+            document.getElementById('per').innerHTML = personal;
+            
+            // リンクへの分岐//
+            // 4つのタイプ性格分類 //
+            var Guardian = ['estj','istj','esfj','isfj']
+            var Explor = ['estp','istp','esfp','isfp']
+            var Analist = ['entj','intj','entp','intp']
+            var Roman = ['enfj','infj','enfp','infp']
+
+            var result1 = Guardian.includes(personal);
+            var result2 = Explor.includes(personal);
+            var result3 = Analist.includes(personal);
+            var result4 = Roman.includes(personal);
+
+            // チャットに飛ばす関数を後で組み込む //
+            if (result1){
+                document.getElementById('chat').innerHTML = '番人タイプ';
+            } else if (result2){
+                document.getElementById('chat').innerHTML = '探検家タイプ';
+            } else if(result3){
+                document.getElementById('chat').innerHTML = '分析家タイプ';
+            } else if(result4){
+                document.getElementById('chat').innerHTML = '理想主義タイプ';
+            }
+        }
 
     </script>
 
@@ -45,11 +93,11 @@
     <h1>性格診断</h1>
 
     <h3>１２問の<span class="foo">全ての質問</span>に対し、どちらが自分によくあっているか選択してください。<br>診断結果により、４つのタイプにわけられ同じタイプ同士でチャットができます。</h3>
+    <p id="num"></p>
+    <p id="per"></p>
+    <p id="chat"></p>
 
     <div class="back_color01"><strong>【質問01】</strong></div>
-
-    <p id="num"></p>
-
     <p class="test01">
         <input type="radio" id="ei1a" name="ei1" value="1">
         <label for="ei1a" class="back_color8">人と話すことで元気になるタイプだ</label>
