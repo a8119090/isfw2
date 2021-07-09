@@ -34,8 +34,6 @@
             var tf = Number(tf1) + Number(tf2) + Number(tf3)
             var jp = Number(jp1) + Number(jp2) + Number(jp3)
 
-            document.getElementById('num').innerHTML = ei;
-
             // 数値から診断結果を分岐//
             var personal = ''
             if (0 < ei) {
@@ -93,7 +91,6 @@
     <h1>性格診断</h1>
 
     <h3>１２問の<span class="foo">全ての質問</span>に対し、どちらが自分によくあっているか選択してください。<br>診断結果により、４つのタイプにわけられ同じタイプ同士でチャットができます。</h3>
-    <p id="num"></p>
     <p id="per"></p>
     <p id="chat"></p>
 
