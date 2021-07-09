@@ -700,3 +700,9 @@ footer a:active {
 	color: #fff;
 }
 
+#chatArea{
+	height: 85vh;
+	background-color: lightblue;
+	overflow: scroll;
+}
+
