@@ -11,7 +11,7 @@
     <script type="text/javascript" src="lib/osql.js"></script>
 
     <script>
-        var buttonPressed = function(){
+        var buttonPressed = function () {
             // ラジオボタンを数値に変換 //
             var ei1 = $('input[name="ei1"]:checked').val();
             var ei2 = $('input[name="ei2"]:checked').val();
@@ -38,35 +38,35 @@
 
             // 数値から診断結果を分岐//
             var personal = ''
-            if (0 < ei){
+            if (0 < ei) {
                 personal += "e"
-            }else{
+            } else {
                 personal += "i"
             }
-            if (0 < sn){
+            if (0 < sn) {
                 personal += "s"
-            }else{
+            } else {
                 personal += "n"
             }
-            if (0 < tf){
+            if (0 < tf) {
                 personal += "t"
-            }else{
+            } else {
                 personal += "f"
             }
-            if (0 < jp){
+            if (0 < jp) {
                 personal += "j"
-            }else{
+            } else {
                 personal += "p"
             }
 
             document.getElementById('per').innerHTML = personal;
-            
+
             // リンクへの分岐//
             // 4つのタイプ性格分類 //
-            var Guardian = ['estj','istj','esfj','isfj']
-            var Explor = ['estp','istp','esfp','isfp']
-            var Analist = ['entj','intj','entp','intp']
-            var Roman = ['enfj','infj','enfp','infp']
+            var Guardian = ['estj', 'istj', 'esfj', 'isfj']
+            var Explor = ['estp', 'istp', 'esfp', 'isfp']
+            var Analist = ['entj', 'intj', 'entp', 'intp']
+            var Roman = ['enfj', 'infj', 'enfp', 'infp']
 
             var result1 = Guardian.includes(personal);
             var result2 = Explor.includes(personal);
@@ -74,13 +74,13 @@
             var result4 = Roman.includes(personal);
 
             // チャットに飛ばす関数を後で組み込む //
-            if (result1){
+            if (result1) {
                 document.getElementById('chat').innerHTML = '番人タイプ';
-            } else if (result2){
+            } else if (result2) {
                 document.getElementById('chat').innerHTML = '探検家タイプ';
-            } else if(result3){
+            } else if (result3) {
                 document.getElementById('chat').innerHTML = '分析家タイプ';
-            } else if(result4){
+            } else if (result4) {
                 document.getElementById('chat').innerHTML = '理想主義タイプ';
             }
         }
