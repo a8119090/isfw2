@@ -16,6 +16,7 @@
 
         function button1Pressed() {
             execInsert();
+            setTimeout();
         }
 
         async function execInsert() {
@@ -24,16 +25,18 @@
             var username = document.getElementById('tf3').value;
 
             var sql = `insert into Users (loginid, password, name) values("${userid}", "${password}", "${username}");`;
-            console.log(sql);
-        //     var objects = await osql.connect(sql);
-        //     console.log(objects);
+            var objects = await osql.connect(sql);
+            console.log(objects);
 
-        //     document.getElementById('result').innerHTML = 'OK';
+            document.getElementById('result').innerHTML = 'OK';
 
-        //    // location.href = 'index.html';
-        //     setTimeout ( TransitionDelay, 5000 );
-
+            location.href = 'index.html';
         }
+
+        setTimeout(function(){
+            window.location.href = 'index.html';
+        }, 2*1000);
+  
     </script>
 
 </head>
