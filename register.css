@@ -46,6 +46,9 @@ input:focus{
 /* 新規登録用ボタン */
 .btn--orange{
     position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
     left: 23.8%;
 }
 a.btn--orange {
@@ -61,3 +64,23 @@ a.btn--orange:hover {
 a.btn--radius {
    border-radius: 125vh;
 }
+
+a.btn--orange.btn--cubic {
+    border-bottom: 5px solid #BF6600;
+  }
+  
+  a.btn--orange.btn--cubic:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid #BF6600;
+  }
+  
+  a.btn--radius {
+    border-radius: 100vh;
+  }
+  
+  .fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+  }
+  
