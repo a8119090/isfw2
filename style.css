@@ -1,32 +1,14 @@
 @charset "utf-8";
 
-a:link ,a:visited {
-	color: #06C;
-	text-decoration: underline;
-}
-a:hover,a:active {
-	color: #390;
-	text-decoration: none;
-}
 h1 {
 	margin-top: 20px;
 	margin-bottom: 30px;
-	font-size: 160%;
+	font-size: 300%;
+	color: rgb(94, 181, 221);
 	border-bottom: 2px double #1872cc;
 }
 
-h2{
-position: relative;
-margin-top: 45px;
-margin-bottom: 30px;
-padding: 0.7em 0.5em;
-border-top: solid 2px black;
-border-bottom: solid 2px black;
-}
-
-
 h3  {
-    border-bottom: 1px solid #3C4033;
     font-weight: bold;
     font-size: 130%;
     margin-bottom: 25px;
@@ -36,289 +18,24 @@ h3  {
     padding-right: 0.25em;
 }
 
-blockquote{
-margin: 1.5em 0;
-padding: 2.2em 1em;
-border: 1px solid #ddd;
-background: #f3f3f2;
-color: #444;
-position:relative;
+.dotira{
+	color: rgb(212, 44, 218);
 }
- 
 
-.back_color1 {
-	background-color: #fffaf0;
-	padding-left: 7px;
-	padding-right: 7px;
-	padding-bottom: 7px;
-	padding-top: 7px;
-}
-.back_color2 {
+.back_color01 {
 	background-color: #f3f3f2;
 	padding-left: 7px;
 	padding-right: 7px;
 	padding-bottom: 7px;
 	padding-top: 7px;
 }
-.back_color3 {
-	background-color: #f5f5f5;
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-bottom: 12px;
-	padding-top: 12px;
-	margin-top: 20px;
-	margin-bottom: 30px;
-	border-radius: 10px;
-}
-.back_color3_2 {
-	background-color: #fffaf0;
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-bottom: 12px;
-	padding-top: 12px;
-	margin-top: 20px;
-	margin-bottom: 30px;
-	border-radius: 10px;
-}
-.back_color4 {
-	background-color: #F7FDF0;
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-bottom: 12px;
-	padding-top: 12px;
-	margin-top: 20px;
-	margin-bottom: 30px;
-	border-radius: 10px;
-}
-.back_color5 {
-	background-color: #fff8dc;
-	padding-left: 7px;
-	padding-top: 7px;
-	padding-right: 7px;
-	padding-bottom: 7px;
-}
 
-.back_color6 {
-	background-color: #f0f8ff;
-	padding-left: 7px;
-	padding-top: 7px;
-	padding-right: 7px;
-	padding-bottom: 7px;
-}
-.back_color7 {
-	background-color: #FFFFEE;
-	padding: 7px;
-	border: 1px solid #666666;
-}
 .back_color8 {
 	padding: 7px;
 	border: 1px solid #666666;
 }
-.back_color9 {
-	padding: 9px;
-	background-color: #758184;
-	color: #FFFFFF;
-}
-.back_color10 {
-	padding: 9px;
-	background-color: #3282b8;
-	color: #FFFFFF;
-}
 
-.space_bottom1 {
-	margin-bottom: 16px;
-}
-.amazon {
-	display: none;
-}
-.ad_pc_bt {
-	display: none;
-}
-
-.color1{
-	color: #d3381c;
-}
-.color3{
-    color: #0061A8;
-}
-.space1{
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-.bigtext01 {
-	font-weight: bold;
-	font-size: 1.1em;
-}
-.bigtext02 {
-	font-size: 1.1em;
-	color: #d3381c;
-	font-weight: bold;
-}
-.bigtext03 {
-	font-weight: bold;
-	font-size: 1.2em;
-	background-color: #FEF2E1;
-
-}
-
-/* チェックボックス用ここから */
-
-.bg_checkbox {
-	margin-top: 0;
-	margin-left: 8px;
-	margin-bottom: 0;
-	padding: 0;
-}
-
-.bg_checkbox li {
-	position: relative;
-	display: block;
-	margin: 0 32px 0 0;
-	padding: 0;
-}
- 
-.bg_checkbox input {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    width: 100%;  
-    height: 100%;
-}
- 
-.bg_checkbox input[type="checkbox"] + label {
-    display: block;
-    background-image: url(whats/images/check_off.gif);
-    background-size: 24px;
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding: 4px 0 0 28px;
-}
- 
-.bg_checkbox input[type="checkbox"]:checked + label {
-    background-image: url(whats/images/check_on.gif);
-}
-
-/* チェックボックス用ここまで */
-
-
-
-.color2 {
-	color: #BE6F3D;
-}
-
-.leftimg {
-	float: left;
-	margin-right: 10px;
-}
-.img50 {
-	width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-}
-.img30 {
-	width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-}
-.img80 {
-	width: 100%;
-	height: auto;
-}
-.img30-40 {
-	width: 40%;
-	height: auto;
-	margin-right: 10px;
-	float: left;
-	margin-bottom: 5px;
-}
-.img20 {
-	width: 20%;
-	height: auto;
-	margin-right: 10px;
-	float: left;
-	margin-bottom: 5px;
-}
-.wordimg60 {
-	width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-}
-.inyo {
-    color: #777777;
-    font-size: 75%;
-}
-.inyo a {
-	color: #777777;
-}
-
-.movie-wrap {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
- 
-.movie-wrap iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-	/* ラジオボタンここから */
-.test3 {
-    margin-top: 20px;
-    margin-bottom: 28px;
-    margin-left: 10px;
-}
-.test3 label {
-    display: block;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-bottom: 2px;
-    margin-top: 2px;
-}
-
-.test3 label:hover {
-	background-color: #FFFBE1;
-}
-.test3 label:active {
-	background-color: #FFFBE1;
-}
-.test3 input:checked + label {
-	background-color: #FFFBE1;
-}
-.test3 input[type=radio] {
-display: none; /* ボタン非表示にする */
-}
-
-.test {
-    margin-top: 30px;
-    margin-bottom: 28px;
-    margin-left: 10px;
-}
-.test label {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 2px;
-    margin-top: 2px;
-}
-
-.test label:hover {
-	background-color: #FFFBE1;
-}
-.test label:active {
-	background-color: #FFFBE1;
-}
-.test input:checked + label {
-	background-color: #FFFBE1;
-}
-
-.test2 {
+.test01 {
     margin-top: 30px;
     margin-bottom: 28px;
 	display:table;
@@ -327,7 +44,7 @@ display: none; /* ボタン非表示にする */
     border-spacing: 8px 0;
     position: relative;
 }
-.test2 label {
+.test01 label {
 	display:table-cell;
     vertical-align:middle;
     text-align:center;
@@ -343,17 +60,17 @@ display: none; /* ボタン非表示にする */
 	margin-bottom: 30px;
 }
 
-.test2 input[type=radio] {
+.test01 input[type=radio] {
 display: none; /* ボタン非表示にする */
 }
 
-.test2 label:hover {
+.test01 label:hover {
 	background-color: #FFFBE1;
 }
-.test2 label:active {
+.test01 label:active {
 	background-color: #FFFBE1;
 }
-.test2 input:checked + label {
+.test01 input:checked + label {
 	background-color: #FFFBE1;
 }
 
@@ -375,334 +92,3 @@ display: none; /* ボタン非表示にする */
 	background-color: #888888 !important;
 	color: #fff;
 }
-
-/* 送信ボタンここまで */
-
-.chart {
-	position: relative;
-	margin-right: 20px;
-	margin-left: 20px;
-	margin-bottom: 20px;
-}
-.center {
-	text-align: center;
-}
-
-
-/* モチベテスト用ここまで */
-
-
-.contents {
-	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-	max-width: 999px;
-	margin-left: auto;
-	margin-right: auto;
-}
-#navTgl:checked ~ .contents {
-	transform: translateX(250px);
-}
-
-/* :::::: toggle button :::::: */
-#navTgl {
-	display: none;
-}
-.open {
-	cursor: pointer;
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-.close {
-	cursor: pointer;
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-.open {
-	z-index: 2;
-	width: 48px;
-	height: 48px;
-	background: lightSeaGreen;
-	transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.open::before,
-.open::after {
-	content: "";
-}
-.open span,
-.open::before,
-.open::after {
-	content: "";
-	position: absolute;
-	top: calc(50% - 1px);
-	left: 30%;
-	width: 40%;
-	border-bottom: 2px solid white;
-	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.open::before {
-	transform: translateY(-8px);
-}
-.open::after {
-	transform: translateY(8px);
-}
-.close {
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	transition: background .6s;
-}
-#navTgl:checked + .open {
-	background: indianRed;
-	transform: translateX(250px);
-}
-#navTgl:checked + .open span {
-	transform: scaleX(0);
-}
-#navTgl:checked + .open::before {
-	transform: rotate(45deg);
-}
-#navTgl:checked + .open::after {
-	transform: rotate(-45deg);
-}
-#navTgl:checked ~ .close {
-	pointer-events: auto;
-	background: rgba(0,0,0,.3);
-}
-
-/* :::::: drawer menu :::::: */
-.menu {
-	z-index: 1;
-	position: fixed;
-	overflow: auto;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 100%;
-	margin: 0;
-	padding: 10px;
-	box-sizing: border-box;
-	background: rgba(0,0,0,.6);
-	transform: translateX(-100%);
-	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.menu a {
-	color: white;
-}
-.menu .ti {
-	text-align: center;
-	color: #888;
-	font-weight: bold;
-	font-size: 120%;
-	margin-bottom: 4px;
-}
-.menu ul {
-	margin: 0;
-	padding: 0;
-}
-.menu li {
-	font-size: 90%;
-	line-height: 1.4;
-	font-weight: normal;
-}
-.menu li {
-	border-bottom: 1px solid rgba(255,255,255,.6);
-}
-.cate a {
-	display: block;
-	padding: 18px 6px;
-	text-decoration: inherit;
-	transition: background .6s;
-}
-.cate a:hover {
-	background: black;
-}
-.follow {
-	text-align: center;
-	margin-top: 14px;
-	margin-bottom: 16px;
-}
-.follow a {
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: 90%;
-	margin-top: 10px;
-}
-
-#navTgl:checked ~ .menu {
-	transform: none;
-}
-
-/* :::::: header, footer :::::: */
-header,
-footer {
-	box-sizing: border-box;
-	text-align: center;
-}
-
-header {
-	position: relative;
-	margin-bottom: 4px;
-}
-#headerlogo {
-	width: 240px;
-	height: auto
-}
-#snavi {
-	margin-bottom: 12px;
-	padding-left: 5px;
-	margin-top: 10px;
-	font-size: 85%;
-	padding-right: 3px;
-	text-align: left;
-}
-footer {
-	background-color: #4B4B4B;
-	clear: both;
-	color: #FFFFFF;
-	padding-top: 14px;
-	padding-bottom: 14px;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 90%;
-	margin-top: 10px;
-	line-height: 180%;
-}
-footer a:link {
-	color: white;
-}
-footer a:visited {
-	color: white;
-}
-footer a:hover {
-	color: white;
-}
-footer a:active {
-	color: white;
-}
-#copyright {
-	padding-top: 16px;
-	padding-bottom: 0px;
-	font-size: 90%;
-}
-
-/* :::::: article :::::: */
-
-#main {
-	width: 94%;
-	margin-left: 3%;
-	margin-right: 3%;
-	overflow:hidden;
-}
-
-#sidebar {
-	width: 98%;
-	clear: both;
-	margin-left: 1%;
-	margin-right: 1%;
-}
-
-.mobileoff {
-	display: none;
-}
-.headerline1 {
-	width: 100%;
-	max-width: 999px;
-	background-color: #444;
-	height: 10px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-.headerline2 {
-	width: 100%;
-	max-width: 999px;
-	background-color: #ddd;
-	height: 7px;
-	margin-top: 0px;
-	margin-bottom: 6px;
-}
-
-/*タグボタンここから*/
-
-.botton_li {
-	display: inline-block;
-	margin-top: 0.5em;
-	margin-right: .3em;
-	margin-left: 0;
-	margin-bottom: .3em;
-	padding: 0;
-}
-.botton_li a {
-	display: inline-block;
-	height: 32px;
-	line-height: 32px;
-	padding: 0 1em;
-	background-color: #fff;
-	border: 1px solid #aaa;
-	border-radius: 3px;
-	white-space: nowrap;
-	color: #333;
-	font-size: 16px;
-	text-decoration: none;
-	-webkit-transition: .2s;
-	transition: .2s;
-}
-.botton_li a:hover {
-	background-color: #25B7C0;
-	border: 1px solid #25B7C0;
-	color: #fff;
-}
-.botton_li_now{
-	display: inline-block;
-	height: 28px;
-	line-height: 28px;
-	padding: 0 1em;
-	background-color: #25B7C0;
-	border: 1px solid #aaa;
-	border-radius: 3px;
-	white-space: nowrap;
-	color: #FFFFFF;
-	font-size: 14px;
-	text-decoration: none;
-	-webkit-transition: .2s;
-	transition: .2s;
-}
-/*タグボタンここまで*/
-/*オーダーボタンここから*/
-.oderbotton_li {
-	display: inline-block;
-	margin-top: 0.7em;
-	margin-right: .8em;
-	margin-left: 0;
-	margin-bottom: .5em;
-	padding: 0;
-}
-.oderbotton_li a {
-    display: inline-block;
-    height: 58px;
-    line-height: 58px;
-    padding: 0 1.5em;
-    background-color: #fff;
-    border: 2px solid #25B7C0;
-    border-radius: 30px;
-    white-space: nowrap;
-    color: #25B7C0;
-    font-size: 20px;
-    text-decoration: none;
-    -webkit-transition: .2s;
-    transition: .2s;
-    font-weight: bold;
-}
-.oderbotton_li a:hover {
-	background-color: #25B7C0;
-	border: 2px solid #25B7C0;
-	color: #fff;
-}
-
-#chatArea{
-	height: 85vh;
-	background-color: lightblue;
-	overflow: scroll;
-}
-
