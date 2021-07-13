@@ -20,11 +20,11 @@
         }
 
         async function execInsert() {
-            var userid = document.getElementById('tf1').value;
+            var loginid = document.getElementById('tf1').value;
             var password = document.getElementById('tf2').value;
             var username = document.getElementById('tf3').value;
 
-            var sql = `insert into Users (loginid, password, name) values("${userid}", "${password}", "${username}");`;
+            var sql = `insert into Users (loginid, password, name) values("${loginid}", "${password}", "${username}");`;
             var objects = await osql.connect(sql);
             console.log(objects);
 
