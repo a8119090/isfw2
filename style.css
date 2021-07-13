@@ -97,3 +97,10 @@ display: none; /* ボタン非表示にする */
 	background-color: #888888 !important;
 	color: #fff;
 }
+
+/*Roomのcss*/
+#chatArea{
+	height: 85vh;
+	background-color: lightblue;
+	overflow: scroll;
+}
