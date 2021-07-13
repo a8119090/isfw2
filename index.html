@@ -20,7 +20,7 @@
             var userid = document.getElementById('tf1').value;
             var password = document.getElementById('tf2').value;
 
-            var sql = `select * from Users where loginid="${userid}";`;
+            var sql = `select * from Users where loginid="${userid}"`;
             var objects = await osql.connect(sql);
 
             if (objects.length <= 0) {
@@ -54,25 +54,23 @@
     <hr>
 
     <div class="container">
-        <form action="＃" method="get" class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div class="form-group">
-                    <label for="name"><span class="label label-danger">必須</span> UserID</label>
-                    <input type="textfield" id="tf1" name="id" class="form-control" placeholder="例：18119000" autofocus
-                        required>
-                </div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group">
+                <label for="name"><span class="label label-danger">必須</span> UserID</label>
+                <input type="textfield" id="tf1" name="id" class="form-control" placeholder="例：18119000" autofocus
+                    required>
+            </div>
 
-                <div class="form-group">
-                    <label for="email"><span class="label label-danger">必須</span> パスワード</label>
-                    <input type="password" id="tf2" name="password" class="form-control"
-                        placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
-                </div>
-                <button type="submit" class="btn btn-primary" onclick="buttonPressed()">ログイン</button>
+            <div class="form-group">
+                <label for="email"><span class="label label-danger">必須</span> パスワード</label>
+                <input type="password" id="tf2" name="password" class="form-control"
+                    placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
             </div>
-            <div class="result">
-                <p id="result"></p>
-            </div>
-        </form>
+            <button type="submit" class="btn btn-primary" onclick="buttonPressed()">ログイン</button>
+        </div>
+        <div class="result">
+            <p id="result"></p>
+        </div>
     </div>
 
     <hr>
