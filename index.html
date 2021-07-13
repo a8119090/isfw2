@@ -22,6 +22,7 @@
 
             var sql = `select * from Users where loginid="${userid}"`;
             var objects = await osql.connect(sql);
+
             if (objects.length <= 0) {
                 document.getElementById('result').innerHTML = 'ログイン失敗：ユーザが見つかりません';
                 return;
@@ -31,11 +32,12 @@
                 return;
             }
 
-            sessionStorage.setItem('userid', objects[0].id);
-            sessionStorage.setItem('username', objects[0].name);
+            sessionStorage.setItem('userid', objects[0].loginid);
+            sessionStorage.setItem('username', object[0].name);
 
             location.href = 'personality.html';
         }
+
     </script>
 
 </head>
