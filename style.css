@@ -104,3 +104,30 @@ display: none; /* ボタン非表示にする */
 	background-color: lightblue;
 	overflow: scroll;
 }
+
+.nameBallon{
+	display: inline-block;
+  border-radius: 30px;
+	background-color: white;
+	width: 30px;
+	text-align: center;
+}
+.chatBalloon{
+	display: inline-block;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+	background-color: white;
+	max-width: 120px;
+	text-align: center;
+}
+.timeBallon{
+	font-size: 10px;
+}
+.leftChat{
+	text-align: left;
+}
+.rightChat{
+	text-align: right;
+}

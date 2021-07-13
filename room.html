@@ -20,14 +20,14 @@
       var sql = `select * from Users inner join Room1 on Users.loginid = Room1.userid order by time asc ;`;
       var objects = await osql.connect(sql);
       console.log(objects);
-      var html = '';
-      html = html + '<ul>';
       for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
-        html = html + '<li>' + object.name + '、' + object.text + '、' + object.time + '</li>';
+        if(object.userid != 111){
+          $('#chatArea').append(`<div class='leftChat'><span class='nameBallon'>${object.name}</span><span class='chatBalloon'>${object.text}</span><span class='timeBalloon'>${object.time}</span></div>`);
+        }else{
+          $('#chatArea').append(`<div class='rightChat'><span class='timeBallon'>${object.time}</span><span class='chatBalloon'>${object.text}</span><span class='nameBallon'>${object.name}</span></div>`);
+        }
       }
-      html = html + '</ul>';
-      document.getElementById('chatArea').innerHTML = html;
     }
   </script>
 
