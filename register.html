@@ -30,11 +30,11 @@
 
             document.getElementById('result').innerHTML = 'OK';
 
-            setTimeout(function(){
-            window.location.href = 'index.html';
-            }, 2*1000);
+            setTimeout(function () {
+                window.location.href = 'index.html';
+            }, 2 * 1000);
         }
-  
+
     </script>
 
 </head>
@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <header>
-            <div class = 'row'>
+            <div class='row'>
                 <h1>ユーザー登録</h1>
             </div>
         </header>
@@ -54,19 +54,21 @@
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="form-group">
                     <label for="name"><span class="label label-danger">必須</span> UserID</label>
-                    <input type="textfield" id="tf1" name="id"  class="form-control" placeholder="例：18119000" autofocus required>
+                    <input type="textfield" id="tf1" name="id" class="form-control" placeholder="例：18119000" autofocus
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="email"><span class="label label-danger">必須</span> パスワード</label>
-                    <input type="password" id="tf2" name="password" class="form-control" placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
+                    <input type="password" id="tf2" name="password" class="form-control"
+                        placeholder="(公開されますので真面目なパスワードは入れないでください．)" required>
                 </div>
 
                 <div class="form-group">
                     <label for="tel"><span class="label label-danger">必須</span> 名前</label>
                     <input type="textfield" id="tf3" name="name" class="form-control" placeholder="田中 太郎" required>
-                </div>   
-                <button type="submit" class="btn btn-primary" onclick="button1Pressed()">登録</button>   
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="button1Pressed()">登録</button>
             </div>
         </form>
     </div>
