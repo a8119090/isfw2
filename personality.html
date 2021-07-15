@@ -13,6 +13,7 @@
 
   <script>
     var buttonPressed = function () {
+
       // ラジオボタンを数値に変換 //
       var ei1 = $('input[name="ei1"]:checked').val();
       var ei2 = $('input[name="ei2"]:checked').val();
@@ -74,13 +75,17 @@
 
       // チャットに飛ばす関数を後で組み込む //
       if (result1) {
-        document.getElementById('chat').innerHTML = '番人タイプ';
+        //document.getElementById('chat').innerHTML = '番人タイプ';
+        location.href = 'room1.html';
       } else if (result2) {
-        document.getElementById('chat').innerHTML = '探検家タイプ';
+        //document.getElementById('chat').innerHTML = '探検家タイプ';
+        location.href = 'room2.html';
       } else if (result3) {
-        document.getElementById('chat').innerHTML = '分析家タイプ';
+        //document.getElementById('chat').innerHTML = '分析家タイプ';
+        location.href = 'room3.html';
       } else if (result4) {
-        document.getElementById('chat').innerHTML = '理想主義タイプ';
+        //document.getElementById('chat').innerHTML = '理想主義タイプ';
+        location.href = 'room4.html';
       }
     }
 
@@ -92,8 +97,6 @@
   <h1>性格診断</h1>
 
   <h3>12問の質問に対し、<span class="dotira">どちらが自分によくあっているか</span>選択してください。<br>診断結果により、4つのタイプにわけられ同じタイプ同士でチャットができます。</h3>
-  <p id="per"></p>
-  <p id="chat"></p>
 
   <div class="back_color01"><strong>【質問01】</strong></div>
   <p class="test01">
