@@ -19,11 +19,11 @@
     var x;
     var name = sessionStorage.getItem('username');
     var id = sessionStorage.getItem('userid');
-      $().ready(function chatAppear() {
-        x = 0;
-        setInterval(doDisplay, 2000);
-        doDisplay();
-      })
+    $().ready(function chatAppear() {
+      x = 0;
+      setInterval(doDisplay, 2000);
+      doDisplay();
+    })
     async function buttonPressed() {
       var text = document.getElementById('textArea').value;
       var sql = `insert into Room1 (userid, text, time) values("${id}", "${text}", now());`;
