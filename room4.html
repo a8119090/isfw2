@@ -26,7 +26,7 @@
     })
     async function buttonPressed() {
       var text = document.getElementById('textArea').value;
-      var sql = `insert into Room1 (userid, text, time) values("${id}", "${text}", now());`;
+      var sql = `insert into Room4(userid, text, time) values("${id}", "${text}", now());`;
       var objects = await osql.connect(sql);
       console.log(objects);
       document.getElementById('textArea').value = "";
@@ -34,7 +34,7 @@
 
     async function doDisplay() {
       $('#chatArea').empty();
-      var sql = `select * from Users inner join Room1 on Users.loginid = Room1.userid order by time asc ;`;
+      var sql = `select * from Users inner join Room4 on Users.loginid = Room4.userid order by time asc ;`;
       var objects = await osql.connect(sql);
       console.log(objects);
       for (var i = 0; i < objects.length; i++) {
