@@ -34,7 +34,7 @@
 
     async function doDisplay() {
       $('#chatArea').empty();
-      var sql = `select * from Users inner join Room2 on Users.loginid = Room2.userid order by time asc ;`;
+      var sql = `select * from Users inner join Room2 on Users.loginid = Room2.userid where DATE_FORMAT(Room2.time, '%Y-%m-%d') = DATE_FORMAT(now(), '%Y-%m-%d') order by time asc;`;
       var objects = await osql.connect(sql);
       console.log(objects);
       for (var i = 0; i < objects.length; i++) {
