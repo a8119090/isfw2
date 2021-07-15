@@ -17,6 +17,8 @@
 
   <script>
     var x;
+    var name = sessionStorage.getItem('username');
+    var id = sessionStorage.getItem('userid');
       $().ready(function chatAppear() {
         x = 0;
         setInterval(doDisplay, 2000);
@@ -24,7 +26,7 @@
       })
     async function buttonPressed() {
       var text = document.getElementById('textArea').value;
-      var sql = `insert into Room1 (userid, text, time) values("111", "${text}", now());`;
+      var sql = `insert into Room1 (userid, text, time) values("${id}", "${text}", now());`;
       var objects = await osql.connect(sql);
       console.log(objects);
       document.getElementById('textArea').value = "";
@@ -37,7 +39,7 @@
       console.log(objects);
       for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
-        if (object.userid != 111) {
+        if (object.userid != id) {
           $('#chatArea').append(`<div class='leftChat'><span class='nameBallon'>${object.name}</span><span class='chatBalloon'>${object.text}</span><span class='timeBalloon'>${object.time}</span></div>`);
         } else {
           $('#chatArea').append(`<div class='rightChat'><span class='timeBallon'>${object.time}</span><span class='chatBalloon'>${object.text}</span><span class='nameBallon'>${object.name}</span></div>`);
