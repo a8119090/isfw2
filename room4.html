@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>ルーム１ ~ 番人タイプ ~</title>
+
+  <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/osql.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>　
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script>
+    var x;
+    var name = sessionStorage.getItem('username');
+    var id = sessionStorage.getItem('userid');
+    $().ready(function chatAppear() {
+      x = 0;
+      setInterval(doDisplay, 2000);
+      doDisplay();
+    })
+    async function buttonPressed() {
+      var text = document.getElementById('textArea').value;
+      var sql = `insert into Room1 (userid, text, time) values("${id}", "${text}", now());`;
+      var objects = await osql.connect(sql);
+      console.log(objects);
+      document.getElementById('textArea').value = "";
+    }
+
+    async function doDisplay() {
+      $('#chatArea').empty();
+      var sql = `select * from Users inner join Room1 on Users.loginid = Room1.userid order by time asc ;`;
+      var objects = await osql.connect(sql);
+      console.log(objects);
+      for (var i = 0; i < objects.length; i++) {
+        var object = objects[i];
+        if (object.userid != id) {
+          $('#chatArea').append(`<div class='leftChat'><span class='nameBallon'>${object.name}</span><span class='chatBalloon'>${object.text}</span><span class='timeBalloon'>${object.time}</span></div>`);
+        } else {
+          $('#chatArea').append(`<div class='rightChat'><span class='timeBallon'>${object.time}</span><span class='chatBalloon'>${object.text}</span><span class='nameBallon'>${object.name}</span></div>`);
+        }
+      }
+      $("#chatArea").scrollTop($("#chatArea")[0].scrollHeight);
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class='row'>
+        <h1>番人タイプ</h1>
+      </div>
+    </header>
+  </div>
+  <div id="main">
+    <div id="chatArea" class="offset-md-2 col-md-8">
+    </div>
+    <div id="submitArea">
+      <textarea id="textArea" class="offset-md-3 col-md-4"></textarea>
+      <button class="offset-md-1 col-md-1" onclick="buttonPressed()">送信</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
